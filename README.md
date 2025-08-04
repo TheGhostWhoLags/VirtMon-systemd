@@ -54,7 +54,7 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
    - Enter IP address shown in terminal
    - The virtual monitor and VNC server will be created when the client attempts to connect
    - Set it to full-screen
-   - The VNC server and virtual screen will close on disconnect
+   - The VNC server and virtual screen will be destroyed on disconnect
 
 ---
 
@@ -68,9 +68,8 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
 
 ## 🧪 Tested on
 
-- Arch Linux
-- Hyprland v0.49.0
-- NVIDIA proprietary drivers v575
+- Debian Linux
+- Hyprland v0.41.2
 - WayVNC 0.9.1
 
 ---
