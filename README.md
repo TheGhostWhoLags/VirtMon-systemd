@@ -40,9 +40,13 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
 5. **Install the scripts**
    - Copy the files to `~/.config/systemd/user/`
    - Enable and the systemd socket to start automatically on boot
-   ```systemd --user enable virtmon.socket```
+   ```bash
+   systemd --user enable virtmon.socket
+   ```
    - Start the systemd socket
-   ```systemd --user start virtmon.socket```
+   ```bash
+   systemd --user start virtmon.socket
+   ```
 
 7. **Connect from another PC**
    - Open a VNC viewer (RealVNC, TigerVNC, etc.)
