@@ -54,7 +54,7 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
    - Enter IP address shown in terminal
    - The virtual monitor and VNC server will be created when the client attempts to connect
    - Set it to full-screen
-   - The VNC server and virtual screen will be destroyed on disconnect
+   - The VNC server and virtual screen will be destroyed when the client disconnects
 
 ---
 
