@@ -54,4 +54,4 @@ hyprctl dispatch focusmonitor "$REAL_MONITOR"
 
 # === FINALLY START WayVNC ===
 echo "[wayvnc] Starting WayVNC on $VIRTUAL_MONITOR..."
-wayvnc 0.0.0.0 5900 "$VIRTUAL_MONITOR"
+wayvnc -d -g -x 3 "$VIRTUAL_MONITOR"

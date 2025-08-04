@@ -1,0 +1,12 @@
+# ~/.config/systemd/user/virtmon.socket
+
+[Unit]
+Description=Virtual Screen VNC Server
+PartOf=virtmon.service
+
+[Socket]
+ListenStream=0.0.0.0:5900
+Accept=no
+
+[Install]
+WantedBy=sockets.target

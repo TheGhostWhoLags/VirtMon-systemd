@@ -1,0 +1,11 @@
+# ~/.config/systemd/user/virtmon.service
+
+[Unit]
+Description=Virtual Screen VNC server
+After=network.target
+Requires=vncscreen.socket
+
+[Service]
+ExecStart=/home/user/.config/systemd/user/virtmon.sh
+ExecStartPost=/home/user/.config/systemd/user/wayvncpoll.sh
+Type=exec
