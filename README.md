@@ -7,6 +7,7 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
 ## 📋 Features
 - Creates a **headless virtual monitor** in Hyprland
 - Shares the virtual monitor over **VNC**
+- Virtual screen and VNC is automaticallt created when a client connects and is cleaned up when the client disconnects
 - Works with **any VNC viewer** on any platform
 - Great for **multi-PC setups** or **repurposing old hardware**
 
