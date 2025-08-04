@@ -23,8 +23,9 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
    monitor=HEADLESS-1,1920x1080@60,0x0,1
    ```
 
-2. **Edit `virtmon.sh`**
+2. **Edit `virtmon.sh` and `virtmon.service`**
    - Adjust values in the `# CONFIG` section (monitor name, resolution, etc.)
+   - Change `/home/user` to your home folder location in `ExecStart` and `ExecStartPost` 
 
 3. **Install dependencies**
    ```bash
@@ -36,18 +37,19 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
    ip a | grep inet
    ```
 
-5. **Run the script**
-   ```bash
-   ./virtmon.sh
-   ```
+5. **Install the scripts**
+   - Copy the files to `~/.config/systemd/user/`
+   - Enable and the systemd socket to start automatically on boot
+   ```systemd --user enable virtmon.socket```
+   - Start the systemd socket
+   ```systemd --user start virtmon.socket```
 
-6. **Connect from another PC**
+7. **Connect from another PC**
    - Open a VNC viewer (RealVNC, TigerVNC, etc.)
    - Enter IP address shown in terminal
+   - The virtual monitor and VNC server will be created when the client attempts to connect
    - Set it to full-screen
-
-7. **Stop when done**
-   - Press `Ctrl+C` in terminal to stop the virtual monitor and VNC server
+   - The VNC server and virtual screen will close on disconnect
 
 ---
 
