@@ -24,8 +24,8 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
    ```
 
 2. **Edit `virtmon.sh` and `virtmon.service`**
-   - Adjust values in the `# CONFIG` section (monitor name, resolution, etc.)
-   - Change `/home/user` to your home folder location in `ExecStart` and `ExecStartPost` 
+   - `virtmon.sh` - Adjust values in the `# CONFIG` section (monitor name, resolution, etc.)
+   - `virtmon.service` - Change `/home/user` to your home folder location in `ExecStart` and `ExecStartPost` 
 
 3. **Install dependencies**
    ```bash
