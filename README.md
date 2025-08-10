@@ -26,11 +26,11 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
 
 2. **Edit `virtmon.sh` and `virtmon.service`**
    - `virtmon.sh` - Adjust values in the `# CONFIG` section (monitor name, resolution, etc.)
-   - `virtmon.service` - Change `/home/user` to your home folder location in `ExecStart` and `ExecStartPost` 
+   - `virtmon.service` - Change `/home/user` to your home folder location in `ExecStart` and `ExecStartPost` (this must be an absolute path)
 
 3. **Install dependencies**
    ```bash
-   sudo pacman -S wayvnc
+   sudo apt install wayvnc
    ```
 
 4. **Find your LAN IP**
@@ -40,6 +40,10 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
 
 5. **Install the scripts**
    - Copy the files to `~/.config/systemd/user/`
+   - Make systemd aware of the new service
+   ```bash
+   systemctl daemon-reload
+   ```
    - Enable and the systemd socket to start automatically on boot
    ```bash
    systemd --user enable virtmon.socket
@@ -53,7 +57,6 @@ Use any device — old laptop, Raspberry Pi, tablet — as a second screen for y
    - Open a VNC viewer (RealVNC, TigerVNC, etc.)
    - Enter IP address shown in terminal
    - The virtual monitor and VNC server will be created when the client attempts to connect
-   - Set it to full-screen
    - The VNC server and virtual screen will be destroyed when the client disconnects
 
 ---
